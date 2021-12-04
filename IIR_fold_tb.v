@@ -1,4 +1,6 @@
 `timescale 1ns / 1ps
+`include "IIR_fold.v"
+
 
 module IIR_fold_tb(
 y
@@ -23,7 +25,7 @@ reg[7:0] count;
 
 initial begin
 clk=0;
-rst=0;
+rst=1;
 a=8;//0.5
 b=-24;//-1.5
 c=32;//2.0
@@ -32,7 +34,9 @@ x=0;
 //xr=0;
 count=0;
 #3 rst=1;
+#8 rst=0;
 
+#200 $finish;
 end
 
 always #1 begin
@@ -40,7 +44,7 @@ always #1 begin
 end
 integer i = -5;
 always@(posedge clk)begin
-    if(rst)begin
+    if(!rst)begin
         if((count==0))begin
             if(i<6)begin
                 xr<=256+i*16;
@@ -57,6 +61,11 @@ always@(posedge clk)begin
             x<=0;
             end
     end
+end
+
+initial begin
+    $recordfile("IIR_fold_waveform.trn");
+    $recordvars();
 end
 
 endmodule
