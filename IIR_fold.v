@@ -37,7 +37,6 @@ function [7:0] multiply;
 	reg signed[width*2-1:0] mul1; // double-width of b.
 	reg[width*2-1:0] ab; // intermediate result of a * b.
 	
-//your code here=============
 	begin
 	mul0 = {{8{a[width-1]}},a[width-1:0]};
 	mul1 = {{8{b[width-1]}},b[width-1:0]};
@@ -49,8 +48,8 @@ endfunction
 
 assign y = stage3_out;
 
-always @(posedge clk or negedge rst) begin
-	if (!rst) begin
+always @(posedge clk or posedge rst) begin
+	if (rst) begin
 		stage0_out <= 0;
 		stage1_out <= 0;
 		stage2_out <= 0;
@@ -82,8 +81,8 @@ end
 
 
 //Store prvious values
-always @(posedge clk or negedge rst) begin
-	if (!rst) begin
+always @(posedge clk or posedge rst) begin
+	if (rst) begin
 		xm1 <= 0;
 		ym1 <= 0;	
 		ym2 <= 0;
