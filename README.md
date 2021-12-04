@@ -1,5 +1,5 @@
 # folded_unfolded_IIR
-Unfolded IIR uses unrolling technique to increase through put of output. While folded IIR uses resource sharing technique in design to minimiza hardware used.
+Unfolded IIR uses unrolling technique to increase through put of output. While folded IIR uses resource sharing technique in design to minimize hardware used.
 
 # Unfolded IIR
 Based on previous IIR design and applied unfolding technique the final design is below
