@@ -47,17 +47,17 @@ end
 
 integer n = -5;
 
-	always@(posedge clk or negedge rst)begin
+	always@(posedge clk or negedge rst) begin
 		if(!rst)begin
             		x2k <= 0;
             		x2k1 <= 0;
 			n <= -6;
-    end
+    		end
 	else begin 
-	       if (n < 6) begin
-            	x2k <=256 + n*16;
-            	x2k1 <=256 + n*16;
-		n <= n + 1;
+		if (n < 6) begin
+            		x2k <=256 + n*16;
+            		x2k1 <=256 + n*16;
+			n <= n + 1;
 		end
         end
 end
