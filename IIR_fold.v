@@ -41,7 +41,7 @@ function [7:0] multiply;
 	begin
 	mul0 = {{8{a[width-1]}},a[width-1:0]};
 	mul1 = {{8{b[width-1]}},b[width-1:0]};
-//your code here=============
+
 	ab = mul0*mul1;
 	multiply=ab[width-1+decimal:decimal];
 	end
@@ -49,7 +49,6 @@ endfunction
 
 assign y = stage3_out;
 
-//your code here=============
 always @(posedge clk or negedge rst) begin
 	if (!rst) begin
 		stage0_out <= 0;
