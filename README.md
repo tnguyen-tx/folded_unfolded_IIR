@@ -3,4 +3,6 @@ Unfolded IIR uses unrolling technique to increase through put of output. While f
 
 # Unfolded IIR
 Based on previous IIR design and applied unfolding technique the final design is below
-![image](https://user-images.githubusercontent.com/57820377/144724118-25cceb1e-1415-4d15-9017-a95eff618904.png)
+![image](https://user-images.githubusercontent.com/57820377/144724129-0274cbd6-acb5-438b-ae8d-8adcce91d391.png)
+
+
