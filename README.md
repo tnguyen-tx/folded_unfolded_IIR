@@ -11,4 +11,6 @@ Design:
 * Waveform:
 ![image](https://user-images.githubusercontent.com/57820377/144724509-3948bee2-0558-43ab-b871-37fb7c7f6603.png)
 
-
+# Unfolded IIR
+Folding IIR is simply resource sharing
+![image](https://user-images.githubusercontent.com/57820377/144724611-905d7a50-188a-4493-9943-802a9a02eed4.png)
