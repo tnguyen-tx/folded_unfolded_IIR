@@ -9,4 +9,6 @@ Based on previous IIR design and applied unfolding technique the final design is
 Design:
 * For design the circuit, it's straight foward. We used flip flops to retain previous results and apply multiplication and additions.
 * Waveform:
+![image](https://user-images.githubusercontent.com/57820377/144724509-3948bee2-0558-43ab-b871-37fb7c7f6603.png)
+
 
