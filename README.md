@@ -16,3 +16,5 @@ Design:
 * In design, it breaks down to multiple stages. Each stage does 1 multiplication and/or addition. In other words, circuit uses a state machine (or counter) to divide operation at each clock cycle.
 * One-hot state machine is used for the best practice.
 ![image](https://user-images.githubusercontent.com/57820377/144724611-905d7a50-188a-4493-9943-802a9a02eed4.png)
+* Waveform
+![image](https://user-images.githubusercontent.com/57820377/144726108-2854f65a-b4e3-40be-b408-bd15d89eca2a.png)
