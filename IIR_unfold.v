@@ -27,7 +27,6 @@ reg [7:0] x2km1;
 reg [7:0] y2km2;
 reg [7:0] y2km1;
 
-//your code here=============
 multiply mul_ax2k(x2k,a,mul_ax2k_out);
 multiply mul_bx2km1(b,x2km1,mul_bx2km1_out);
 multiply mul_cy2km1(c,y2km1,mul_cy2km1_out);
@@ -36,13 +35,14 @@ multiply mul_a2k1(a, x2k1, mul_a2k1_out);
 multiply mul_bx2k(b,x2k,mul_bx2k_out);
 multiply mul_cy2k(c,y2k, mul_cy2k_out);
 multiply mul_dy2km1(d,y2km1,mul_dy2km1_out);
-//your code here=============
+
+	
 //Comb
 assign y2k = mul_ax2k_out + mul_bx2km1_out + mul_cy2km1_out + mul_dy2km2_out;
 assign y2k1 = mul_a2k1_out + mul_bx2k_out + mul_cy2k_out + mul_dy2km1_out;
 //Sequential
-	always @(posedge clk or posedge rst) begin
-		if (rst) begin
+	always @(posedge clk or negedge rst) begin
+		if (!rst) begin
 			y2km2 <= 0;
 			y2km1 <= 0;
 			x2km1 <= 0;
