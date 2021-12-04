@@ -12,7 +12,7 @@ Design:
 ![image](https://user-images.githubusercontent.com/57820377/144724509-3948bee2-0558-43ab-b871-37fb7c7f6603.png)
 
 # Unfolded IIR
-*Instead of using 6 multiplier and 2 adders, unfold IIR uses 1 multiplier and 1 adder only. This saves chip area but takes multiple clock cycles to complete operations.
-*In design, it breaks down to multiple stages. Each stage does 1 multiplication and/or addition. In other words, circuit uses a state machine (or counter) to divide operation at each clock cycle.
-*One-hot state machine is used for the best practice.
+* Instead of using 6 multiplier and 2 adders, unfold IIR uses 1 multiplier and 1 adder only. This saves chip area but takes multiple clock cycles to complete operations.
+* In design, it breaks down to multiple stages. Each stage does 1 multiplication and/or addition. In other words, circuit uses a state machine (or counter) to divide operation at each clock cycle.
+* One-hot state machine is used for the best practice.
 ![image](https://user-images.githubusercontent.com/57820377/144724611-905d7a50-188a-4493-9943-802a9a02eed4.png)
