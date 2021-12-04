@@ -48,7 +48,7 @@ end
 integer n = -5;
 
 	always@(posedge clk or negedge rst)begin
-		if(! rst)begin
+		if(!rst)begin
             		x2k <= 0;
             		x2k1 <= 0;
 			n <= -6;
